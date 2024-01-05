@@ -29,6 +29,7 @@
 		C9B28C192B48807200F81C98 /* Nova.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Nova.docc; sourceTree = "<group>"; };
 		C9B28C1F2B48807200F81C98 /* NovaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B28C242B48807200F81C98 /* NovaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaTests.swift; sourceTree = "<group>"; };
+		C9B28C2F2B48978D00F81C98 /* CI_macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = CI_macOS.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B28C182B48807200F81C98 /* Nova.h */,
+				C9B28C2F2B48978D00F81C98 /* CI_macOS.xctestplan */,
 				C9B28C192B48807200F81C98 /* Nova.docc */,
 			);
 			path = Nova;

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "BEDCC57F-2B53-4633-AC50-B4DE0D9A990F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Nova.xcodeproj",
+        "identifier" : "C9B28C1E2B48807200F81C98",
+        "name" : "NovaTests"
+      }
+    }
+  ],
+  "version" : 1
+}
