@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C949E88E2B48CC0900A74BF6 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = C949E88D2B48CC0900A74BF6 /* Auth */; };
+		C949E8902B48CC0900A74BF6 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = C949E88F2B48CC0900A74BF6 /* Functions */; };
+		C949E8922B48CC0900A74BF6 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = C949E8912B48CC0900A74BF6 /* PostgREST */; };
+		C949E8942B48CC0900A74BF6 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = C949E8932B48CC0900A74BF6 /* Realtime */; };
+		C949E8962B48CC0900A74BF6 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = C949E8952B48CC0900A74BF6 /* Storage */; };
 		C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C192B48807200F81C98 /* Nova.docc */; };
 		C9B28C202B48807200F81C98 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
 		C9B28C252B48807200F81C98 /* NovaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C242B48807200F81C98 /* NovaTests.swift */; };
@@ -29,7 +34,7 @@
 		C9B28C192B48807200F81C98 /* Nova.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Nova.docc; sourceTree = "<group>"; };
 		C9B28C1F2B48807200F81C98 /* NovaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B28C242B48807200F81C98 /* NovaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaTests.swift; sourceTree = "<group>"; };
-		C9B28C2F2B48978D00F81C98 /* CI_macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = CI_macOS.xctestplan; sourceTree = SOURCE_ROOT; };
+		C9B28C2F2B48978D00F81C98 /* CI_macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_macOS.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C949E8922B48CC0900A74BF6 /* PostgREST in Frameworks */,
+				C949E8902B48CC0900A74BF6 /* Functions in Frameworks */,
+				C949E88E2B48CC0900A74BF6 /* Auth in Frameworks */,
+				C949E8962B48CC0900A74BF6 /* Storage in Frameworks */,
+				C949E8942B48CC0900A74BF6 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +125,13 @@
 			dependencies = (
 			);
 			name = Nova;
+			packageProductDependencies = (
+				C949E88D2B48CC0900A74BF6 /* Auth */,
+				C949E88F2B48CC0900A74BF6 /* Functions */,
+				C949E8912B48CC0900A74BF6 /* PostgREST */,
+				C949E8932B48CC0900A74BF6 /* Realtime */,
+				C949E8952B48CC0900A74BF6 /* Storage */,
+			);
 			productName = Nova;
 			productReference = C9B28C152B48807200F81C98 /* Nova.framework */;
 			productType = "com.apple.product-type.framework";
@@ -164,6 +181,9 @@
 				Base,
 			);
 			mainGroup = C9B28C0B2B48807100F81C98;
+			packageReferences = (
+				C949E88C2B48CC0900A74BF6 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = C9B28C162B48807200F81C98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -468,6 +488,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C949E88C2B48CC0900A74BF6 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C949E88D2B48CC0900A74BF6 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C949E88C2B48CC0900A74BF6 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		C949E88F2B48CC0900A74BF6 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C949E88C2B48CC0900A74BF6 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		C949E8912B48CC0900A74BF6 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C949E88C2B48CC0900A74BF6 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		C949E8932B48CC0900A74BF6 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C949E88C2B48CC0900A74BF6 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		C949E8952B48CC0900A74BF6 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C949E88C2B48CC0900A74BF6 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9B28C0C2B48807100F81C98 /* Project object */;
 }
