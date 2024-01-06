@@ -12,6 +12,7 @@
 		C949E8922B48CC0900A74BF6 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = C949E8912B48CC0900A74BF6 /* PostgREST */; };
 		C949E8942B48CC0900A74BF6 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = C949E8932B48CC0900A74BF6 /* Realtime */; };
 		C949E8962B48CC0900A74BF6 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = C949E8952B48CC0900A74BF6 /* Storage */; };
+		C949E89C2B4A067400A74BF6 /* SupabaseAPIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E89B2B4A067400A74BF6 /* SupabaseAPIInfo.swift */; };
 		C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C192B48807200F81C98 /* Nova.docc */; };
 		C9B28C202B48807200F81C98 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
 		C9B28C252B48807200F81C98 /* NovaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C242B48807200F81C98 /* NovaTests.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C949E89B2B4A067400A74BF6 /* SupabaseAPIInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAPIInfo.swift; sourceTree = "<group>"; };
 		C9B28C152B48807200F81C98 /* Nova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B28C182B48807200F81C98 /* Nova.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nova.h; sourceTree = "<group>"; };
 		C9B28C192B48807200F81C98 /* Nova.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Nova.docc; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C949E8972B4A062600A74BF6 /* Supabase */ = {
+			isa = PBXGroup;
+			children = (
+				C949E89B2B4A067400A74BF6 /* SupabaseAPIInfo.swift */,
+			);
+			path = Supabase;
+			sourceTree = "<group>";
+		};
 		C9B28C0B2B48807100F81C98 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		C9B28C172B48807200F81C98 /* Nova */ = {
 			isa = PBXGroup;
 			children = (
+				C949E8972B4A062600A74BF6 /* Supabase */,
 				C9B28C182B48807200F81C98 /* Nova.h */,
 				C9B28C2F2B48978D00F81C98 /* CI_macOS.xctestplan */,
 				C9B28C192B48807200F81C98 /* Nova.docc */,
@@ -216,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C949E89C2B4A067400A74BF6 /* SupabaseAPIInfo.swift in Sources */,
 				C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +440,7 @@
 		C9B28C2D2B48807200F81C98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6WA5TYMFND;
@@ -444,6 +457,7 @@
 		C9B28C2E2B48807200F81C98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6WA5TYMFND;
