@@ -25,6 +25,17 @@ final class SupabaseAPIClientTests: XCTestCase {
         XCTAssertEqual(dbClient.messages, [.read(.dailyChallenges)])
     }
     
+    func test_read_deliversErrorOnDBError() async throws {
+        let (sut, dbClient) = makeSUT()
+        let expectedError = anyNSError()
+        dbClient.throwErrorDuringRetrieval(anyNSError())
+        do {
+            let _: Testing = try await sut.readFromDatabase(tableName: .dailyChallenges)
+        } catch {
+            XCTAssertEqual(expectedError, error as NSError)
+        }
+    }
+    
     private func makeSUT() -> (sut: SupabaseAPIClient, dbClient: MockSupabaseDatabaseClient) {
         let dbClient = MockSupabaseDatabaseClient()
         let sut = SupabaseAPIClient(databaseClient: dbClient)
