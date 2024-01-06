@@ -11,15 +11,31 @@ import XCTest
 
 final class SupabaseAPIClientTests: XCTestCase {
     struct Testing: Decodable {}
-    func test_supabaseAPIClient_doesNotContact_DBClient_uponInit() async throws {
-        let dbClient = MockSupabaseDatabaseClient()
-        let apiClient = SupabaseAPIClient(databaseClient: dbClient)
+    func test_supabaseAPIClient_doesNotContact_DBClient_uponInit() {
+        let (_, dbClient) = makeSUT()
         XCTAssertTrue(dbClient.messages.isEmpty)
     }
     
+    func test_read_requestsFromCorrectDBTableName() async throws {
+        let (sut, dbClient) = makeSUT()
+        dbClient.throwErrorDuringRetrieval(anyNSError())
+        do {
+            let _: Testing = try await sut.readFromDatabase(tableName: .dailyChallenges)
+        } catch {}
+        XCTAssertEqual(dbClient.messages, [.read(.dailyChallenges)])
+    }
+    
+    private func makeSUT() -> (sut: SupabaseAPIClient, dbClient: MockSupabaseDatabaseClient) {
+        let dbClient = MockSupabaseDatabaseClient()
+        let sut = SupabaseAPIClient(databaseClient: dbClient)
+        trackForMemoryLeaks(dbClient)
+        trackForMemoryLeaks(sut)
+        return (sut, dbClient)
+    }
+    
     private class MockSupabaseDatabaseClient: SupabaseDatabaseClient {
-        enum Message {
-            case retrieve(SupabaseTableName)
+        enum Message: Equatable {
+            case read(SupabaseTableName)
         }
         
         private(set) var messages = [Message]()
@@ -27,7 +43,10 @@ final class SupabaseAPIClientTests: XCTestCase {
         var returnError: Error?
         
         func read(from tableName: SupabaseTableName) async throws -> Data {
-            messages.append(.retrieve(tableName))
+            messages.append(.read(tableName))
+            if let error = returnError {
+                throw error
+            }
             return returnResult!
         }
         
