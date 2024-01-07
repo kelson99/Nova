@@ -39,10 +39,17 @@ final class SupabaseAPIClientTests: XCTestCase {
         let (sut, dbClient) = makeSUT()
         let expectedChallenge = DailyChallenge(id: 1, hint: "", correctAnswer: "", challengeText: "", challengeID: 0)
         let expectedData = makeDailyChallengeData(expectedChallenge)
-        dbClient.returnResultDuringRetrieval(data: expectedData)
+        
+        try await expect(sut, toReturn: expectedChallenge, when: {
+            dbClient.returnResultDuringRetrieval(data: expectedData)
+        })
+    }
+    
+    private func expect(_ sut: SupabaseAPIClient, toReturn expected: DailyChallenge, when action: () -> Void) async throws {
+        action()
         do {
             let dailyChallenges: [DailyChallenge] = try await sut.readFromDatabase(tableName: .dailyChallenges)
-            XCTAssertEqual(dailyChallenges, [expectedChallenge])
+            XCTAssertEqual(dailyChallenges, [expected])
         } catch {
             XCTFail("Expected no errors - \(error)")
         }
