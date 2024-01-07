@@ -24,24 +24,21 @@ final class SupabaseAPIClientTests: XCTestCase {
         XCTAssertEqual(dbClient.messages, [.read(.dailyChallenges)])
     }
     
-    func test_read_deliversErrorOnDBError() async throws {
-        let (sut, dbClient) = makeSUT()
-        let expectedError = anyNSError()
-        dbClient.throwErrorDuringRetrieval(expectedError)
-        do {
-            let _: DailyChallenge = try await sut.readFromDatabase(tableName: .dailyChallenges)
-        } catch {
-            XCTAssertEqual(expectedError, error as NSError)
-        }
-    }
-    
-    func test_read_deliversDecodableType_onSuccesful200Response() async throws {
+    func test_read_deliversDecodableType_onSuccesfulResponse() async throws {
         let (sut, dbClient) = makeSUT()
         let expectedChallenge = DailyChallenge(id: 1, hint: "", correctAnswer: "", challengeText: "", challengeID: 0)
         let expectedData = makeDailyChallengeData(expectedChallenge)
         
         try await expect(sut, toReturn: expectedChallenge, when: {
             dbClient.returnResultDuringRetrieval(data: expectedData)
+        })
+    }
+    
+    func test_read_deliversError_onInvalidJSON() async throws {
+        let (sut, dbClient) = makeSUT()
+        let invalidJSONData = Data("invalid json".utf8)
+        try await expect(sut, toReturn: SupabaseAPIClient.SupabaseAPIClientError.invalidData, when: {
+            dbClient.returnResultDuringRetrieval(data: invalidJSONData)
         })
     }
     
@@ -52,6 +49,15 @@ final class SupabaseAPIClientTests: XCTestCase {
             XCTAssertEqual(dailyChallenges, [expected])
         } catch {
             XCTFail("Expected no errors - \(error)")
+        }
+    }
+    
+    private func expect(_ sut: SupabaseAPIClient, toReturn expectedError: Error, when action: () -> Void) async throws {
+        action()
+        do {
+            let dailyChallenges: [DailyChallenge] = try await sut.readFromDatabase(tableName: .dailyChallenges)
+        } catch {
+            XCTAssertEqual(error as NSError, expectedError as NSError)
         }
     }
     

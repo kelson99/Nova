@@ -8,16 +8,24 @@
 import Supabase
 
 final public class SupabaseAPIClient: SupabaseClient {
+    public enum SupabaseAPIClientError: Error {
+        case invalidData
+    }
+    
     public let databaseClient: SupabaseDatabaseClient
     public init(databaseClient: SupabaseDatabaseClient) {
         self.databaseClient = databaseClient
     }
 
     public func readFromDatabase<T:Decodable>(tableName: SupabaseTableName) async throws -> T {
-        let data = try await databaseClient.read(from: tableName)
-        let decoder = JSONDecoder()
-        let decodedData = try decoder.decode(T.self, from: data)
-        return decodedData
+        do {
+            let data = try await databaseClient.read(from: tableName)
+            let decoder = JSONDecoder()
+            let decodedData = try decoder.decode(T.self, from: data)
+            return decodedData
+        } catch {
+            throw SupabaseAPIClientError.invalidData
+        }
     }
 }
 
