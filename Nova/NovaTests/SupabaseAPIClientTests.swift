@@ -34,6 +34,14 @@ final class SupabaseAPIClientTests: XCTestCase {
         })
     }
     
+    func test_read_deliversError_onAnyError() async throws {
+        let (sut, dbClient) = makeSUT()
+        let error = anyNSError()
+        try await expect(sut, toReturn: error, when: {
+            dbClient.throwErrorDuringRetrieval(error)
+        })
+    }
+    
     func test_read_deliversError_onInvalidJSON() async throws {
         let (sut, dbClient) = makeSUT()
         let invalidJSONData = Data("invalid json".utf8)

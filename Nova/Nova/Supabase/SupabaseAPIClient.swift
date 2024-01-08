@@ -20,9 +20,16 @@ final public class SupabaseAPIClient: SupabaseClient {
     public func readFromDatabase<T:Decodable>(tableName: SupabaseTableName) async throws -> T {
         do {
             let data = try await databaseClient.read(from: tableName)
+            return try getDecodedObject(from: data)
+        } catch  {
+            throw error
+        }
+    }
+    
+    private func getDecodedObject<T:Decodable>(from data: Data) throws -> T {
+        do {
             let decoder = JSONDecoder()
-            let decodedData = try decoder.decode(T.self, from: data)
-            return decodedData
+            return try decoder.decode(T.self, from: data)
         } catch {
             throw SupabaseAPIClientError.invalidData
         }
