@@ -30,6 +30,8 @@
 		C949E8D22B4B8E3300A74BF6 /* NovaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8D12B4B8E3300A74BF6 /* NovaAppTests.swift */; };
 		C949E8DC2B4B8E3300A74BF6 /* NovaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8DB2B4B8E3300A74BF6 /* NovaAppUITests.swift */; };
 		C949E8DE2B4B8E3300A74BF6 /* NovaAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8DD2B4B8E3300A74BF6 /* NovaAppUITestsLaunchTests.swift */; };
+		C949E8EA2B4B936900A74BF6 /* DailyChallengeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8E92B4B936900A74BF6 /* DailyChallengeLoader.swift */; };
+		C949E8EE2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8ED2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift */; };
 		C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C192B48807200F81C98 /* Nova.docc */; };
 		C9B28C202B48807200F81C98 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
 		C9B28C252B48807200F81C98 /* NovaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C242B48807200F81C98 /* NovaTests.swift */; };
@@ -82,6 +84,8 @@
 		C949E8D72B4B8E3300A74BF6 /* NovaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C949E8DB2B4B8E3300A74BF6 /* NovaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAppUITests.swift; sourceTree = "<group>"; };
 		C949E8DD2B4B8E3300A74BF6 /* NovaAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C949E8E92B4B936900A74BF6 /* DailyChallengeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeLoader.swift; sourceTree = "<group>"; };
+		C949E8ED2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeLoaderTests.swift; sourceTree = "<group>"; };
 		C9B28C152B48807200F81C98 /* Nova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B28C182B48807200F81C98 /* Nova.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nova.h; sourceTree = "<group>"; };
 		C9B28C192B48807200F81C98 /* Nova.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Nova.docc; sourceTree = "<group>"; };
@@ -202,6 +206,30 @@
 			path = NovaAppUITests;
 			sourceTree = "<group>";
 		};
+		C949E8E82B4B934800A74BF6 /* Daily Challenge API */ = {
+			isa = PBXGroup;
+			children = (
+				C949E8E92B4B936900A74BF6 /* DailyChallengeLoader.swift */,
+			);
+			path = "Daily Challenge API";
+			sourceTree = "<group>";
+		};
+		C949E8EB2B4B93CA00A74BF6 /* Supabase API Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C949E8A22B4A08D300A74BF6 /* SupabaseAPIClientTests.swift */,
+			);
+			path = "Supabase API Tests";
+			sourceTree = "<group>";
+		};
+		C949E8EC2B4B93DA00A74BF6 /* Daily Challenge API */ = {
+			isa = PBXGroup;
+			children = (
+				C949E8ED2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift */,
+			);
+			path = "Daily Challenge API";
+			sourceTree = "<group>";
+		};
 		C9B28C0B2B48807100F81C98 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +258,7 @@
 		C9B28C172B48807200F81C98 /* Nova */ = {
 			isa = PBXGroup;
 			children = (
+				C949E8E82B4B934800A74BF6 /* Daily Challenge API */,
 				C949E8B12B4B8D6F00A74BF6 /* Daily Challenge Feature */,
 				C949E8972B4A062600A74BF6 /* Supabase */,
 				C9B28C182B48807200F81C98 /* Nova.h */,
@@ -244,7 +273,8 @@
 			children = (
 				C949E8AC2B4A1B5000A74BF6 /* Helpers */,
 				C9B28C242B48807200F81C98 /* NovaTests.swift */,
-				C949E8A22B4A08D300A74BF6 /* SupabaseAPIClientTests.swift */,
+				C949E8EC2B4B93DA00A74BF6 /* Daily Challenge API */,
+				C949E8EB2B4B93CA00A74BF6 /* Supabase API Tests */,
 			);
 			path = NovaTests;
 			sourceTree = "<group>";
@@ -488,6 +518,7 @@
 			files = (
 				C949E89C2B4A067400A74BF6 /* SupabaseAPIInfo.swift in Sources */,
 				C949E89E2B4A071600A74BF6 /* SupabaseAPIClient.swift in Sources */,
+				C949E8EA2B4B936900A74BF6 /* DailyChallengeLoader.swift in Sources */,
 				C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */,
 				C949E8A72B4A192900A74BF6 /* SupabaseClient.swift in Sources */,
 				C949E8A52B4A191500A74BF6 /* SupabaseTableName.swift in Sources */,
@@ -504,6 +535,7 @@
 				C9B28C252B48807200F81C98 /* NovaTests.swift in Sources */,
 				C949E8A32B4A08D300A74BF6 /* SupabaseAPIClientTests.swift in Sources */,
 				C949E8AE2B4A1B5F00A74BF6 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				C949E8EE2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
