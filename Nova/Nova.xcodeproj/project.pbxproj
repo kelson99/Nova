@@ -35,6 +35,7 @@
 		C949E8F02B4C686F00A74BF6 /* SupabaseDatabaseContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8EF2B4C686F00A74BF6 /* SupabaseDatabaseContact.swift */; };
 		C949E8F82B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8F72B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.swift */; };
 		C949E8F92B4C6E4E00A74BF6 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
+		C949E8FF2B4C734700A74BF6 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8AD2B4A1B5F00A74BF6 /* XCTestCase+MemoryLeakTracking.swift */; };
 		C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C192B48807200F81C98 /* Nova.docc */; };
 		C9B28C202B48807200F81C98 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
 		C9B28C262B48807200F81C98 /* Nova.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B28C182B48807200F81C98 /* Nova.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -575,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C949E8F82B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.swift in Sources */,
+				C949E8FF2B4C734700A74BF6 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
