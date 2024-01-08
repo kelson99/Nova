@@ -7,7 +7,7 @@
 
 import Supabase
 
-final public class SupabaseAPIClient: SupabaseClient {
+final public class SupabaseAPIClient: SupabaseService {
     public enum SupabaseAPIClientError: Error {
         case invalidData
     }

@@ -31,7 +31,6 @@ final class DailyChallengeLoaderTests: XCTestCase {
     func test_load_deliversError_onAnyError() async throws {
         let (sut, api) = createSUT()
         let anyError = anyNSError()
-        let expectedDailyChallenges = createDailyChallenges()
         try await expect(sut, toReturn: anyError, when: {
             api.returnErrorDuringRead(anyError)
         })
@@ -71,7 +70,7 @@ final class DailyChallengeLoaderTests: XCTestCase {
         ]
     }
     
-    private class SupabaseAPIClientSpy: SupabaseClient {
+    private class SupabaseAPIClientSpy: SupabaseService {
         enum Message: Equatable {
             case read(SupabaseTableName)
         }

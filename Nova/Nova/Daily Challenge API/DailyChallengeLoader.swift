@@ -12,9 +12,9 @@ protocol DailyChallengeLoader {
 }
 
 public final class RemoteDailyChallengeLoader: DailyChallengeLoader {
-    let supabaseAPIClient: SupabaseClient
+    let supabaseAPIClient: SupabaseService
     
-    public init(supabaseAPIClient: SupabaseClient) {
+    public init(supabaseAPIClient: SupabaseService) {
         self.supabaseAPIClient = supabaseAPIClient
     }
     
