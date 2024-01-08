@@ -28,6 +28,15 @@ final class DailyChallengeLoaderTests: XCTestCase {
         })
     }
     
+    func test_load_deliversError_onAnyError() async throws {
+        let (sut, api) = createSUT()
+        let anyError = anyNSError()
+        let expectedDailyChallenges = createDailyChallenges()
+        try await expect(sut, toReturn: anyError, when: {
+            api.returnErrorDuringRead(anyError)
+        })
+    }
+    
     private func expect(_ sut: RemoteDailyChallengeLoader, toReturn expectedResult: [DailyChallenge], when action: () -> Void, file: StaticString = #file, line: UInt = #line) async throws {
         action()
         do {
@@ -35,6 +44,15 @@ final class DailyChallengeLoaderTests: XCTestCase {
             XCTAssertEqual(dailyChallenges, expectedResult)
         } catch {
             XCTFail("Expected no failures")
+        }
+    }
+    
+    private func expect(_ sut: RemoteDailyChallengeLoader, toReturn expectedError: Error, when action: () -> Void, file: StaticString = #file, line: UInt = #line) async throws {
+        action()
+        do {
+            let _ = try await sut.load()
+        } catch {
+            XCTAssertEqual(expectedError as NSError, error as NSError)
         }
     }
     
@@ -71,6 +89,10 @@ final class DailyChallengeLoaderTests: XCTestCase {
         
         func returnResultDuringRead(dailyChallenges: [DailyChallenge]) {
             returnResult = dailyChallenges
+        }
+        
+        func returnErrorDuringRead(_ error: Error) {
+            returnError = error
         }
     }
 }
