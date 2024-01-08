@@ -34,7 +34,6 @@
 		C949E8EE2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8ED2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift */; };
 		C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C192B48807200F81C98 /* Nova.docc */; };
 		C9B28C202B48807200F81C98 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
-		C9B28C252B48807200F81C98 /* NovaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C242B48807200F81C98 /* NovaTests.swift */; };
 		C9B28C262B48807200F81C98 /* Nova.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B28C182B48807200F81C98 /* Nova.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -90,7 +89,6 @@
 		C9B28C182B48807200F81C98 /* Nova.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nova.h; sourceTree = "<group>"; };
 		C9B28C192B48807200F81C98 /* Nova.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Nova.docc; sourceTree = "<group>"; };
 		C9B28C1F2B48807200F81C98 /* NovaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9B28C242B48807200F81C98 /* NovaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaTests.swift; sourceTree = "<group>"; };
 		C9B28C2F2B48978D00F81C98 /* CI_macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_macOS.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -272,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				C949E8AC2B4A1B5000A74BF6 /* Helpers */,
-				C9B28C242B48807200F81C98 /* NovaTests.swift */,
 				C949E8EC2B4B93DA00A74BF6 /* Daily Challenge API */,
 				C949E8EB2B4B93CA00A74BF6 /* Supabase API Tests */,
 			);
@@ -532,7 +529,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C949E8B02B4A1C9600A74BF6 /* SharedTestHelpers.swift in Sources */,
-				C9B28C252B48807200F81C98 /* NovaTests.swift in Sources */,
 				C949E8A32B4A08D300A74BF6 /* SupabaseAPIClientTests.swift in Sources */,
 				C949E8AE2B4A1B5F00A74BF6 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				C949E8EE2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift in Sources */,
