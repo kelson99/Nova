@@ -33,6 +33,8 @@
 		C949E8EA2B4B936900A74BF6 /* DailyChallengeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8E92B4B936900A74BF6 /* DailyChallengeLoader.swift */; };
 		C949E8EE2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8ED2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift */; };
 		C949E8F02B4C686F00A74BF6 /* SupabaseDatabaseContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8EF2B4C686F00A74BF6 /* SupabaseDatabaseContact.swift */; };
+		C949E8F82B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E8F72B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.swift */; };
+		C949E8F92B4C6E4E00A74BF6 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
 		C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C192B48807200F81C98 /* Nova.docc */; };
 		C9B28C202B48807200F81C98 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
 		C9B28C262B48807200F81C98 /* Nova.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B28C182B48807200F81C98 /* Nova.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +54,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = C949E8B72B4B8E3100A74BF6;
 			remoteInfo = NovaApp;
+		};
+		C949E8FA2B4C6E4E00A74BF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B28C0C2B48807100F81C98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B28C142B48807200F81C98;
+			remoteInfo = Nova;
 		};
 		C9B28C212B48807200F81C98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -87,6 +96,8 @@
 		C949E8E92B4B936900A74BF6 /* DailyChallengeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeLoader.swift; sourceTree = "<group>"; };
 		C949E8ED2B4B940B00A74BF6 /* DailyChallengeLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeLoaderTests.swift; sourceTree = "<group>"; };
 		C949E8EF2B4C686F00A74BF6 /* SupabaseDatabaseContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseDatabaseContact.swift; sourceTree = "<group>"; };
+		C949E8F52B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyChallengeEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C949E8F72B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeEndToEndTests.swift; sourceTree = "<group>"; };
 		C9B28C152B48807200F81C98 /* Nova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B28C182B48807200F81C98 /* Nova.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nova.h; sourceTree = "<group>"; };
 		C9B28C192B48807200F81C98 /* Nova.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Nova.docc; sourceTree = "<group>"; };
@@ -113,6 +124,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C949E8F22B4C6E4E00A74BF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C949E8F92B4C6E4E00A74BF6 /* Nova.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,11 +250,20 @@
 			path = "Daily Challenge API";
 			sourceTree = "<group>";
 		};
+		C949E8F62B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests */ = {
+			isa = PBXGroup;
+			children = (
+				C949E8F72B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.swift */,
+			);
+			path = DailyChallengeEndToEndTests;
+			sourceTree = "<group>";
+		};
 		C9B28C0B2B48807100F81C98 = {
 			isa = PBXGroup;
 			children = (
 				C9B28C172B48807200F81C98 /* Nova */,
 				C9B28C232B48807200F81C98 /* NovaTests */,
+				C949E8F62B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests */,
 				C949E8B92B4B8E3100A74BF6 /* NovaApp */,
 				C949E8D02B4B8E3300A74BF6 /* NovaAppTests */,
 				C949E8DA2B4B8E3300A74BF6 /* NovaAppUITests */,
@@ -252,6 +280,7 @@
 				C949E8B82B4B8E3100A74BF6 /* NovaApp.app */,
 				C949E8CD2B4B8E3300A74BF6 /* NovaAppTests.xctest */,
 				C949E8D72B4B8E3300A74BF6 /* NovaAppUITests.xctest */,
+				C949E8F52B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -346,6 +375,24 @@
 			productReference = C949E8D72B4B8E3300A74BF6 /* NovaAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C949E8F42B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C949E8FC2B4C6E4E00A74BF6 /* Build configuration list for PBXNativeTarget "DailyChallengeEndToEndTests" */;
+			buildPhases = (
+				C949E8F12B4C6E4E00A74BF6 /* Sources */,
+				C949E8F22B4C6E4E00A74BF6 /* Frameworks */,
+				C949E8F32B4C6E4E00A74BF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C949E8FB2B4C6E4E00A74BF6 /* PBXTargetDependency */,
+			);
+			name = DailyChallengeEndToEndTests;
+			productName = DailyChallengeEndToEndTests;
+			productReference = C949E8F52B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C9B28C142B48807200F81C98 /* Nova */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9B28C292B48807200F81C98 /* Build configuration list for PBXNativeTarget "Nova" */;
@@ -411,6 +458,9 @@
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = C949E8B72B4B8E3100A74BF6;
 					};
+					C949E8F42B4C6E4E00A74BF6 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					C9B28C142B48807200F81C98 = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -437,6 +487,7 @@
 			targets = (
 				C9B28C142B48807200F81C98 /* Nova */,
 				C9B28C1E2B48807200F81C98 /* NovaTests */,
+				C949E8F42B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests */,
 				C949E8B72B4B8E3100A74BF6 /* NovaApp */,
 				C949E8CC2B4B8E3300A74BF6 /* NovaAppTests */,
 				C949E8D62B4B8E3300A74BF6 /* NovaAppUITests */,
@@ -462,6 +513,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C949E8D52B4B8E3300A74BF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C949E8F32B4C6E4E00A74BF6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -512,6 +570,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C949E8F12B4C6E4E00A74BF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C949E8F82B4C6E4E00A74BF6 /* DailyChallengeEndToEndTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C9B28C112B48807200F81C98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,6 +617,11 @@
 			isa = PBXTargetDependency;
 			target = C949E8B72B4B8E3100A74BF6 /* NovaApp */;
 			targetProxy = C949E8D82B4B8E3300A74BF6 /* PBXContainerItemProxy */;
+		};
+		C949E8FB2B4C6E4E00A74BF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B28C142B48807200F81C98 /* Nova */;
+			targetProxy = C949E8FA2B4C6E4E00A74BF6 /* PBXContainerItemProxy */;
 		};
 		C9B28C222B48807200F81C98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -711,6 +782,36 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NovaApp;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C949E8FD2B4C6E4E00A74BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WA5TYMFND;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FrioSolutions.DailyChallengeEndToEndTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C949E8FE2B4C6E4E00A74BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WA5TYMFND;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FrioSolutions.DailyChallengeEndToEndTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -962,6 +1063,15 @@
 			buildConfigurations = (
 				C949E8E62B4B8E3300A74BF6 /* Debug */,
 				C949E8E72B4B8E3300A74BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C949E8FC2B4C6E4E00A74BF6 /* Build configuration list for PBXNativeTarget "DailyChallengeEndToEndTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C949E8FD2B4C6E4E00A74BF6 /* Debug */,
+				C949E8FE2B4C6E4E00A74BF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

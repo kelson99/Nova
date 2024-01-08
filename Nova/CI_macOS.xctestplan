@@ -18,6 +18,13 @@
         "identifier" : "C9B28C1E2B48807200F81C98",
         "name" : "NovaTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Nova.xcodeproj",
+        "identifier" : "C949E8F42B4C6E4E00A74BF6",
+        "name" : "DailyChallengeEndToEndTests"
+      }
     }
   ],
   "version" : 1
