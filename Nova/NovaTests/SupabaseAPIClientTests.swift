@@ -63,7 +63,7 @@ final class SupabaseAPIClientTests: XCTestCase {
     private func expect(_ sut: SupabaseAPIClient, toReturn expectedError: Error, when action: () -> Void) async throws {
         action()
         do {
-            let dailyChallenges: [DailyChallenge] = try await sut.readFromDatabase(tableName: .dailyChallenges)
+            let _: [DailyChallenge] = try await sut.readFromDatabase(tableName: .dailyChallenges)
         } catch {
             XCTAssertEqual(error as NSError, expectedError as NSError)
         }
