@@ -41,6 +41,11 @@
 		C949E9072B4CD16200A74BF6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C949E9062B4CD16200A74BF6 /* Localizable.xcstrings */; };
 		C949E90A2B4DB1B000A74BF6 /* LoadResourcePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E9092B4DB1B000A74BF6 /* LoadResourcePresenterTests.swift */; };
 		C949E90D2B4DB1F700A74BF6 /* ResourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E90C2B4DB1F700A74BF6 /* ResourceView.swift */; };
+		C949E90F2B4DCAFC00A74BF6 /* ResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E90E2B4DCAFC00A74BF6 /* ResourceErrorView.swift */; };
+		C949E9112B4DCB0A00A74BF6 /* ResourceErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E9102B4DCB0A00A74BF6 /* ResourceErrorViewModel.swift */; };
+		C949E9132B4DCB2F00A74BF6 /* ResourceLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E9122B4DCB2F00A74BF6 /* ResourceLoadingViewModel.swift */; };
+		C949E9152B4DCB3E00A74BF6 /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E9142B4DCB3E00A74BF6 /* ResourceLoadingView.swift */; };
+		C949E9172B4DCB5300A74BF6 /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949E9162B4DCB5300A74BF6 /* LoadResourcePresenter.swift */; };
 		C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C192B48807200F81C98 /* Nova.docc */; };
 		C9B28C202B48807200F81C98 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
 		C9B28C262B48807200F81C98 /* Nova.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B28C182B48807200F81C98 /* Nova.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -109,6 +114,11 @@
 		C949E9062B4CD16200A74BF6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C949E9092B4DB1B000A74BF6 /* LoadResourcePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenterTests.swift; sourceTree = "<group>"; };
 		C949E90C2B4DB1F700A74BF6 /* ResourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceView.swift; sourceTree = "<group>"; };
+		C949E90E2B4DCAFC00A74BF6 /* ResourceErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorView.swift; sourceTree = "<group>"; };
+		C949E9102B4DCB0A00A74BF6 /* ResourceErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorViewModel.swift; sourceTree = "<group>"; };
+		C949E9122B4DCB2F00A74BF6 /* ResourceLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingViewModel.swift; sourceTree = "<group>"; };
+		C949E9142B4DCB3E00A74BF6 /* ResourceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingView.swift; sourceTree = "<group>"; };
+		C949E9162B4DCB5300A74BF6 /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
 		C9B28C152B48807200F81C98 /* Nova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B28C182B48807200F81C98 /* Nova.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nova.h; sourceTree = "<group>"; };
 		C9B28C192B48807200F81C98 /* Nova.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Nova.docc; sourceTree = "<group>"; };
@@ -298,6 +308,11 @@
 			isa = PBXGroup;
 			children = (
 				C949E90C2B4DB1F700A74BF6 /* ResourceView.swift */,
+				C949E9162B4DCB5300A74BF6 /* LoadResourcePresenter.swift */,
+				C949E90E2B4DCAFC00A74BF6 /* ResourceErrorView.swift */,
+				C949E9102B4DCB0A00A74BF6 /* ResourceErrorViewModel.swift */,
+				C949E9122B4DCB2F00A74BF6 /* ResourceLoadingViewModel.swift */,
+				C949E9142B4DCB3E00A74BF6 /* ResourceLoadingView.swift */,
 			);
 			path = "Shared Presentation";
 			sourceTree = "<group>";
@@ -639,11 +654,16 @@
 				C949E89E2B4A071600A74BF6 /* SupabaseAPIClient.swift in Sources */,
 				C949E8EA2B4B936900A74BF6 /* DailyChallengeLoader.swift in Sources */,
 				C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */,
+				C949E9172B4DCB5300A74BF6 /* LoadResourcePresenter.swift in Sources */,
 				C949E8A72B4A192900A74BF6 /* SupabaseService.swift in Sources */,
+				C949E90F2B4DCAFC00A74BF6 /* ResourceErrorView.swift in Sources */,
+				C949E9112B4DCB0A00A74BF6 /* ResourceErrorViewModel.swift in Sources */,
 				C949E90D2B4DB1F700A74BF6 /* ResourceView.swift in Sources */,
 				C949E8A52B4A191500A74BF6 /* SupabaseTableName.swift in Sources */,
 				C949E8AB2B4A195F00A74BF6 /* SupabaseDatabaseClient.swift in Sources */,
+				C949E9152B4DCB3E00A74BF6 /* ResourceLoadingView.swift in Sources */,
 				C949E8B32B4B8D7900A74BF6 /* DailyChallenge.swift in Sources */,
+				C949E9132B4DCB2F00A74BF6 /* ResourceLoadingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
