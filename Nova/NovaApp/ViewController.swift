@@ -5,6 +5,7 @@
 //  Created by Kelson Hartle on 1/7/24.
 //
 
+import Nova
 import UIKit
 
 class ViewController: UIViewController {

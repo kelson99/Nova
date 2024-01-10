@@ -49,6 +49,8 @@
 		C9B28C1A2B48807200F81C98 /* Nova.docc in Sources */ = {isa = PBXBuildFile; fileRef = C9B28C192B48807200F81C98 /* Nova.docc */; };
 		C9B28C202B48807200F81C98 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
 		C9B28C262B48807200F81C98 /* Nova.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B28C182B48807200F81C98 /* Nova.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9C862C32B4F15F800497F89 /* Nova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; };
+		C9C862C42B4F15F800497F89 /* Nova.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9B28C152B48807200F81C98 /* Nova.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +82,28 @@
 			remoteGlobalIDString = C9B28C142B48807200F81C98;
 			remoteInfo = Nova;
 		};
+		C9C862C52B4F15F800497F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9B28C0C2B48807100F81C98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9B28C142B48807200F81C98;
+			remoteInfo = Nova;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9C862C72B4F15F800497F89 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C9C862C42B4F15F800497F89 /* Nova.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C949E89B2B4A067400A74BF6 /* SupabaseAPIInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAPIInfo.swift; sourceTree = "<group>"; };
@@ -131,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C862C32B4F15F800497F89 /* Nova.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,10 +416,12 @@
 				C949E8B42B4B8E3100A74BF6 /* Sources */,
 				C949E8B52B4B8E3100A74BF6 /* Frameworks */,
 				C949E8B62B4B8E3100A74BF6 /* Resources */,
+				C9C862C72B4F15F800497F89 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C9C862C62B4F15F800497F89 /* PBXTargetDependency */,
 			);
 			name = NovaApp;
 			productName = NovaApp;
@@ -703,6 +729,11 @@
 			target = C9B28C142B48807200F81C98 /* Nova */;
 			targetProxy = C9B28C212B48807200F81C98 /* PBXContainerItemProxy */;
 		};
+		C9C862C62B4F15F800497F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9B28C142B48807200F81C98 /* Nova */;
+			targetProxy = C9C862C52B4F15F800497F89 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -727,6 +758,7 @@
 				DEVELOPMENT_TEAM = 6WA5TYMFND;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NovaApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NOVA;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -756,6 +788,7 @@
 				DEVELOPMENT_TEAM = 6WA5TYMFND;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NovaApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NOVA;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -943,6 +976,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -1003,6 +1037,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1017,6 +1052,7 @@
 		C9B28C2A2B48807200F81C98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1041,6 +1077,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FrioSolutions.Nova;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1049,6 +1087,7 @@
 		C9B28C2B2B48807200F81C98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1073,6 +1112,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FrioSolutions.Nova;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
